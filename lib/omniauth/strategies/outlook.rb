@@ -20,10 +20,6 @@ module OmniAuth
         super
       end
 
-      option :token_params, {
-        resource: 'https://graph.microsoft.com/'
-      }
-
       option :authorize_options, %i[display score auth_type scope prompt login_hint domain_hint response_mode]
 
       uid { raw_info["id"] }
